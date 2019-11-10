@@ -7,9 +7,10 @@ text-align: center;
 margin: 0;
 }
 
+/*todo: why isn't 'white' working for header and have? */
 header {
     background-color: #F15B31;
-    color: #FFFFFF;
+    color: white;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 20px;
@@ -20,7 +21,7 @@ header {
 
 nav {
     background-color: #00A6B3;
-    color: #FFFFFF;
+    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
     text-transform: uppercase;
@@ -33,6 +34,20 @@ main {
     margin-bottom: 35px;
     margin-right: auto;
     margin-left: auto;
+    
+}
+
+
+footer {
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0D2C40;
+    color: white;
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 500;
+    
     
 }
 
@@ -75,6 +90,32 @@ color: #F15B31;
 letter-spacing: 1px;
 font-weight: 600;
 font-size: 18px;  
+border-bottom: 2px solid transparent;
     
+}
+
+/*classes*/
+.copyright {
+    
+    float: left
+}
+
+.message {
+    float: right
+    
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+/*pseudoclasses*/
+a:hover {
+    border-color: white;
 }
 
