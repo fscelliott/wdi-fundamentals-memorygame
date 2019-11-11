@@ -52,7 +52,8 @@ function checkForMatch() {
   var cardId2 = cardsInPlay[1];
   if (cards[cardId1].rank === cards[cardId2].rank) {
       alert("You found a match!");
-    } else {
+   } 
+   else {
       alert("Sorry, try again.");
     }
 }
