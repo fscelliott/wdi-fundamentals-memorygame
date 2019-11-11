@@ -51,7 +51,21 @@ function checkForMatch() {
 }
 }
 
-//left off 5/7: https://my.generalassemb.ly/activities/245?from=dashboard&assignmentUuid=3fba0ce5-e21f-4cad-9a78-4a2079765516 
+function createBoard() {
+    
+    for (var i = 0; i < cards.length; i++) {
+        
+        //For each card, use createElement to create an img element and store it in a variable cardElement. 
+        
+        var cardElement = document.createElement('img');
+        cardElement.setAttribute("src", cards[i].cardImage);
+        cardElement.setAttribute("data-id", i);
+        //pseudocode:
+        cardElement.addEventListener(click, flipCard);
+        //pseudocode: appendChild(cardElement) to queryById(game-board)
+        }
+        
+    }
 
 flipCard(2);
 flipCard(0);
