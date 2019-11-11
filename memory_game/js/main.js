@@ -45,13 +45,13 @@ function flipCard(cardId) {
 
 function checkForMatch() {
     if (cardsInPlay[0] === cardsInPlay[1]) {
-  console.log("You found a match!");
+  alert("You found a match!");
 } else {
-  console.log("Sorry, try again.");
+  alert("Sorry, try again.");
 }
 }
 
-
+//left off 5/7: https://my.generalassemb.ly/activities/245?from=dashboard&assignmentUuid=3fba0ce5-e21f-4cad-9a78-4a2079765516 
 
 flipCard(2);
 flipCard(0);
