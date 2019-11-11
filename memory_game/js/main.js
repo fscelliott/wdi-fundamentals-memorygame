@@ -26,29 +26,33 @@ cardImage: "images/king-of-diamonds.png"
 
 
 var cardsInPlay = [];
-//var cardOne = cards[0];
-//var cardTwo = cards[2];
+
 
 testCard = cards[1];
 console.log('cards: ' + testCard.cardImage);
 
 
 function flipCard(cardId) {
-    console.log( "User flipped " + cards[cardId].rank);
-    console.log( cards[cardId].cardImage);
-    console.log( cards[cardId].suit);
-    cardsInPlay.push(cards[cardId]);
+    console.log("uuuser flipped " + this.src);
+    cardId = this.getAttribute("data-id");
+    console.log('card id: ' + cardId);
+    //console.log( "User flipped " + cards[cardId].rank);
+    //console.log( cards[cardId].cardImage);
+    //console.log( cards[cardId].suit);
+    cardsInPlay.push(cardId);
+    this.setAttribute("src", cards[cardId].cardImage);
     if (cardsInPlay.length == 2) {
        checkForMatch();
        }
     }
 
 function checkForMatch() {
-    if (cardsInPlay[0] === cardsInPlay[1]) {
-  alert("You found a match!");
-} else {
-  alert("Sorry, try again.");
-}
+  
+  if (cardsInPlay[0].rank === cardsInPlay[1].rank) {
+      alert("You found a match!");
+    } else {
+      alert("Sorry, try again.");
+    }
 }
 
 function createBoard() {
@@ -58,15 +62,18 @@ function createBoard() {
         //For each card, use createElement to create an img element and store it in a variable cardElement. 
         
         var cardElement = document.createElement('img');
-        cardElement.setAttribute("src", cards[i].cardImage);
+        cardElement.setAttribute("src", "images/back.png");
         cardElement.setAttribute("data-id", i);
-        //pseudocode:
-        cardElement.addEventListener(click, flipCard);
-        //pseudocode: appendChild(cardElement) to queryById(game-board)
+        cardElement.addEventListener("click", flipCard);
+        document.getElementById("game-board").appendChild(cardElement);
+        console.log('card created w/ scr: ' + cards[i].cardImage);
+       
         }
         
     }
+    
+createBoard();    
 
-flipCard(2);
-flipCard(0);
+//flipCard(2);
+//flipCard(0);
 
