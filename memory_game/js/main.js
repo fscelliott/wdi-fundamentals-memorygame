@@ -47,8 +47,10 @@ function flipCard(cardId) {
     }
 
 function checkForMatch() {
-  
-  if (cardsInPlay[0].rank === cardsInPlay[1].rank) {
+  console.log('card 1 rank ' + cardsInPlay[0].rank)
+  var cardId1 = cardsInPlay[0];
+  var cardId2 = cardsInPlay[1];
+  if (cards[cardId1].rank === cards[cardId2].rank) {
       alert("You found a match!");
     } else {
       alert("Sorry, try again.");
